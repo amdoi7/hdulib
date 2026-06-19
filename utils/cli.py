@@ -10,7 +10,9 @@ from utils.booking_service import BookingService
 from utils.config import ConfigManager
 from utils.console import console, logger
 from utils.models import BookingResult, BookingTask
+from dotenv import load_dotenv
 
+load_dotenv()  # 加载 .env 文件
 
 def parse_config_string(config: str) -> list[BookingTask]:
     """解析配置字符串"""
@@ -120,7 +122,7 @@ def display_results(results: list[BookingResult]) -> None:
 
         row = [
             str(result.user)[:11],
-            str(result.seat_info)[:19],
+            str(result.seat_info)[:20],
             status[:9],
             booking_time[:17],
             duration[:9],

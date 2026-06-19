@@ -1,5 +1,5 @@
 
-**/__pychache__/**
+**/__pycache__/**
 *.pyc
 .venv/
 .ruff_cache/
@@ -7,3 +7,5 @@ uv.lock
 
 a.txt
 .env
+data/rooms_cache*.json
+!data/rooms_cache.json
